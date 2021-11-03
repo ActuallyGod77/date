@@ -26,16 +26,29 @@ while close != 'Y':
     answer = answer + leaps + r
     rr=int(r-(r%4))
     answer = answer + (rr/4)
+    year = int(year)
     if month == '01':
-        if r%4 == 0:
-            answer = answer - 4 + day
+        if years == 0:
+            if year%400 == 0:
+                answer = answer - 4 + day
+            else:
+                answer = answer - 3 + day
         else:
-            answer = answer - 3 + day
+            if year%4 == 0:
+                answer = answer - 4 + day
+            else:
+                answer = answer - 3 + day
     elif month == '02':
-        if r%4 == 0:
-            answer = answer - 29 + day
+        if years == 0:
+            if year%400 == 0:
+                answer = answer - 29 + day
+            else:
+                answer = answer - 28 + day
         else:
-            answer = answer - 28 + day
+            if year%4 == 0:
+                answer = answer - 29 + day
+            else:
+                answer = answer - 28 + day
     elif month == '03':
         answer = answer - 14 + day
     elif month == '04':
