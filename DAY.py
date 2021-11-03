@@ -1,6 +1,6 @@
 close = 'N'
 print('Give me any date (1753-9999) and I will tell you the corresponding day of the week')
-while close == 'N':
+while close != 'Y':
     def split(x):
         return [char for char in x]
     date=(input("DD MM YYYY ").split())
